@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1rem;
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -27,8 +28,8 @@
   border-radius: 0.5rem;
 }
 
-.nav a:hover {
-  /* .nav a:active { */
+.nav a:hover,
+.nav a:active {
   background: linear-gradient(90deg, #ff8a05, #f9b331);
   background-clip: text;
   -webkit-background-clip: text;
