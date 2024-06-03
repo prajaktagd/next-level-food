@@ -10,4 +10,8 @@ const getMeals = async () => {
   return db.prepare("SELECT * FROM meals").all() as Array<Meal>;
 };
 
-export { getMeals };
+const getMeal = (slug: String) => {
+  return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug) as Meal;
+};
+
+export { getMeals, getMeal };

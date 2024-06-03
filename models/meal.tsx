@@ -8,5 +8,5 @@ export default interface Meal {
   summary: string;
   instructions: string;
   creator: string;
-  creatorEmail: string;
+  creator_email: string;
 }
