@@ -1,6 +1,8 @@
 fileignoreconfig:
 - filename: app/community/page.tsx
   checksum: 28e324837220765af16a26345bdcef2d9da27455c0e8b13a8e1c3049e9e8b2c1
+- filename: components/meals/meal-grid.tsx
+  checksum: db4e224fec7625b97a890f9caaf984b95e7cfdee8f237cbac3f55d133b8cbdb0
 - filename: package-lock.json
-  checksum: 200eb467ab5ffda435b8c1dbc2cf620d48242f5627617f4e4ed3828e013757da
+  checksum: 17118b26114ea47ba34e6009065c5e1ac70647326a53c0c11d1e44c99a5c7504
 version: "1.0"
