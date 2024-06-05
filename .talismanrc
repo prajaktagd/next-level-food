@@ -4,5 +4,5 @@ fileignoreconfig:
 - filename: components/meals/meal-grid.tsx
   checksum: db4e224fec7625b97a890f9caaf984b95e7cfdee8f237cbac3f55d133b8cbdb0
 - filename: package-lock.json
-  checksum: 17118b26114ea47ba34e6009065c5e1ac70647326a53c0c11d1e44c99a5c7504
+  checksum: 45e3c0c3ecfed5d41b0eda512c8957c7397240acd9b1e143f685596af3ca9993
 version: "1.0"

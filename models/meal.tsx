@@ -1,12 +1,12 @@
-import { StaticImageData } from "next/image";
-
-export default interface Meal {
-  id: number;
+interface Meal {
+  id: number | null;
   title: string;
   slug: string;
-  image: StaticImageData;
+  image: string;
   summary: string;
   instructions: string;
   creator: string;
   creator_email: string;
 }
+
+export default Meal;

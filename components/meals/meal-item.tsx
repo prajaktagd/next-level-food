@@ -4,7 +4,9 @@ import Image from "next/image";
 import Meal from "../../models/meal";
 import styles from "./meal-item.module.css";
 
-const MealItem = ({ title, slug, image, summary, creator }: Readonly<Meal>) => {
+const MealItem = (meal: Readonly<Meal>) => {
+  const { title, slug, image, summary, creator } = meal;
+
   return (
     <article className={styles.meal}>
       <header>
