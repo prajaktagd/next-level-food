@@ -1,4 +1,5 @@
-import ImagePicker from "@/components/meals/image-picker";
+import ImagePicker from "@/components/images/image-picker";
+import ShareMealButton from "@/components/buttons/ShareMealButton";
 import classes from "./page.module.css";
 import shareMeal from "@/utils/actions";
 
@@ -42,7 +43,7 @@ const ShareMeal = () => {
           </p>
           <ImagePicker label="Your meal image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <ShareMealButton />
           </p>
         </form>
       </main>
