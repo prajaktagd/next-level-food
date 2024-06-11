@@ -9,7 +9,10 @@ const isInvalidText = (text: string) => {
   return !text || text.trim() === "";
 };
 
-const shareMeal = async (formData: FormData) => {
+const shareMeal = async (
+  prevState: Readonly<{ message: string }>,
+  formData: FormData
+) => {
   const title = formData.get("title") as string;
   const summary = formData.get("summary") as string;
   const instructions = xss(formData.get("instructions") as string);
@@ -25,7 +28,7 @@ const shareMeal = async (formData: FormData) => {
     image.size === 0 ||
     userInputTexts.some(isInvalidText)
   ) {
-    throw Error("Invalid input");
+    return { message: "Invalid input!" };
   }
 
   const slug = slugify(title, { lower: true });
@@ -42,6 +45,7 @@ const shareMeal = async (formData: FormData) => {
     creator: creator,
     creator_email: creatorEmail,
   };
+
   await saveMeal(meal, image);
   redirect("/meals");
 };
