@@ -4,6 +4,7 @@ import slugify from "slugify";
 import xss from "xss";
 import { saveMeal } from "./db-utils";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 const isInvalidText = (text: string) => {
   return !text || text.trim() === "";
@@ -47,6 +48,7 @@ const shareMeal = async (
   };
 
   await saveMeal(meal, image);
+  revalidatePath("/meals");
   redirect("/meals");
 };
 

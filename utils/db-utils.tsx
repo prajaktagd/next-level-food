@@ -4,11 +4,10 @@ import fs from "fs";
 import Meal from "@/models/meal";
 
 const db = sql("meals.db");
-// db.prepare(`DELETE from meals WHERE slug = ?`).run("samosa");
 
 const getMeals = async () => {
+  // db.prepare(`DELETE from meals WHERE slug = ?`).run("khichadi");
   await new Promise((resolve, reject) => setTimeout(resolve, 2000));
-  // throw Error();
   return db.prepare("SELECT * FROM meals").all() as Array<Meal>;
 };
 
