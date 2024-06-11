@@ -3,6 +3,20 @@ import styles from "./page.module.css";
 import { getMeal } from "@/utils/db-utils";
 import { notFound } from "next/navigation";
 
+export const generateMetadata = async ({
+  params,
+}: Readonly<{ params: { mealSlug: String } }>) => {
+  const meal = getMeal(params.mealSlug);
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+};
+
 const MealDetails = ({
   params,
 }: Readonly<{ params: { mealSlug: String } }>) => {
