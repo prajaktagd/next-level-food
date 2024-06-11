@@ -51,7 +51,6 @@ const ImagePicker = ({
           name={name}
           ref={imageInputRef}
           onChange={handleFileInputChange}
-          required
         />
         <button
           className={styles.button}
